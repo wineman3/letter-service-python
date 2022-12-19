@@ -5,6 +5,7 @@ import re
 def lambda_handler(event, context):
     try:
         reqBody = json.loads(event['body'])
+        print('test')
         if('str' in reqBody):
             respBody = {
                 "containsAllLetters" : str(contains_all_letters(reqBody['str']))
