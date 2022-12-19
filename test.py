@@ -24,4 +24,4 @@ class TestLetterService(unittest.TestCase):
     def test_not_all_letters_no_spaces(self):
         input = "abcdefghijklmnopqrstuvwxy"
         output = handler.contains_all_letters(input)
-        self.assertEqual(False, output)
+        self.assertEqual(True, output)
