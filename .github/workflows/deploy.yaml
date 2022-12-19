@@ -20,6 +20,11 @@ jobs:
       - name: Run tests
         run: python -m unittest
 
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
       - name: serverless deploy
         uses: serverless/github-action@v3.1
         with:
